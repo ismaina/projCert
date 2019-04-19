@@ -23,7 +23,10 @@
         <?php pageContent(); ?>
     </article>
 
-    <footer><small>&copy;<?php echo date('Y'); ?> <?php siteName(); ?>.<br><?php siteVersion(); ?></small></footer>
+    <footer>
+    <small>&copy;<?php echo date('Y'); ?> <?php siteName(); ?>.<br><?php siteVersion(); ?></small>
+    <small>&copy;Test DevOps site exam for @Maina Wanjau - maina.wanjau@gmail.com<br></small>
+    </footer>
 
 </div>
 </body>
