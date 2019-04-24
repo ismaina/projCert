@@ -6,6 +6,9 @@ try {
         {
             checkout scm
         }
+        stage('Change to root'){
+            sh ""
+        }
         stage('Change Directiry'){
             sh "cd website"
         }
