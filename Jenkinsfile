@@ -17,7 +17,7 @@ try {
         
         }
         stage('Build docker image') {
-            sh "docker build -t mwanjau_pro_cert_dev:latest website/"
+            sh "docker build -t mwanjau_pro_cert_dev:latest ."
         }
         stage('Check the docker image'){
             sh "docker image ls | grep mwanjau_pro_cert_dev"
