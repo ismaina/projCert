@@ -1,15 +1,12 @@
 try {
-    node('puppet-agent') {
+    node() {
         def app
 
         stage('Clone Repository')
         {
             checkout scm
         }
-        stage('Change to root'){
-            sh ""
-        }
-        stage('Change Directiry'){
+        stage('Change Directory'){
             sh "cd website"
         }
 
@@ -27,6 +24,9 @@ try {
         }
         stage('Check which containers are running'){
             sh "docker ps"
+        }
+        stage('Remove Containers that are running'){
+            sh "docker container rm -f $(docker ps -aq)"
         }
         stage('Run the docker image locally'){
             sh "docker container run -lsd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
