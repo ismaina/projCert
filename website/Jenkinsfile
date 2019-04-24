@@ -1,5 +1,6 @@
-try {
-    node('puppet-agent') {
+node('puppet-agent') {
+    try {
+    
         def app
 
         stage('Clone Repository')
