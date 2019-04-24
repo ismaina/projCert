@@ -32,7 +32,7 @@ try {
             sh "docker ps -a"
         }
         stage(' Check if website is runnint on '){
-            sh "curl http://localhost:8001 | grep '@Maina' "
+            sh "curl http://34.74.195.135:8001 | grep '@Maina' "
         }
 
 
