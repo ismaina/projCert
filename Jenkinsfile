@@ -29,7 +29,7 @@ try {
           //  sh "docker container rm -f | grep docker ps -aq"
         //}
         stage('Run the docker image locally'){
-            sh "docker container run -lsd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
+            sh "docker container run -itd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
         }
         stage('Check if docker container is running'){
             sh "docker ps -a"
