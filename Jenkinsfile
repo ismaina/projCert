@@ -1,5 +1,5 @@
 try {
-    node() {
+    node('puppet-agent') {
         def app
 
         stage('Clone Repository')
@@ -26,7 +26,7 @@ try {
             sh "docker ps"
         }
         stage('Remove Containers that are running'){
-            sh "docker container rm -f $(docker ps -aq)"
+            sh "docker container rm -f | grep docker ps -aq"
         }
         stage('Run the docker image locally'){
             sh "docker container run -lsd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
