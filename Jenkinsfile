@@ -6,6 +6,9 @@ try {
         {
             checkout scm
         }
+        stage('Change Directiry'){
+            sh "cd website"
+        }
 
         stage('Show me the files') {
             
