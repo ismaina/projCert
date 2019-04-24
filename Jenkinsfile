@@ -25,9 +25,9 @@ try {
         stage('Check which containers are running'){
             sh "docker ps"
         }
-        stage('Remove Containers that are running'){
-            sh "docker container rm -f | grep docker ps -aq"
-        }
+        //stage('Remove Containers that are running'){
+          //  sh "docker container rm -f | grep docker ps -aq"
+        //}
         stage('Run the docker image locally'){
             sh "docker container run -lsd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
         }
