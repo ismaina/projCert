@@ -25,6 +25,9 @@ try {
         stage('Check which containers are running'){
             sh "docker ps"
         }
+        stage('remove previous Container'){
+            sh "docker container rm -f proj_cert_dev"
+        }
         stage('Run the docker image locally'){
             sh "docker container run -itd -p 8001:80 --name proj_cert_dev mwanjau_pro_cert_dev:latest"
         }
