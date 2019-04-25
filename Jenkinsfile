@@ -34,9 +34,9 @@ try {
         stage('Check if docker container is running'){
             sh "docker ps -a"
         }
-        stage(' Check if website is runnint on '){
-            sh "curl http://34.74.195.135:8001 | grep '@Maina' "
-        }
+        //stage(' Check if website is runnint on '){
+          //  sh "curl http://34.74.195.135:8001 | grep '@Maina' "
+        //}
 
 
     }
